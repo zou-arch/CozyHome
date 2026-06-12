@@ -198,7 +198,12 @@ def detect_file_type_by_name(fname):
 # 批量去背
 # ============================================================
 def batch_flood_remove():
-    """批量从边缘洪水填充去青色背景，保存到中间目录（跳过已处理的）"""
+    """批量从边缘洪水填充背景，保存到中间目录（跳过已处理的）"""
+    # 初始化显示（convert_alpha 需要）
+    if not pygame.display.get_surface():
+        pygame.init()
+        pygame.display.set_mode((1, 1))
+
     os.makedirs(PROCESSED_DIR, exist_ok=True)
 
     all_files = sorted([f for f in os.listdir(TEMP_DIR)
@@ -240,7 +245,7 @@ def batch_flood_remove():
         outside = set()
         visited = set()
         queue = deque()
-        tolerance = 60
+        tolerance = 80
 
         def matches_bg(x, y):
             r, g, b = int(pixels[x, y, 0]), int(pixels[x, y, 1]), int(pixels[x, y, 2])
@@ -848,7 +853,7 @@ class FurnitureEditor:
             return 0
         q = deque([(sx, sy)])
         filled = {(sx, sy)}
-        tolerance = 60
+        tolerance = 80
         while q:
             cx, cy = q.popleft()
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
@@ -968,7 +973,7 @@ class FurnitureEditor:
         outside = set()
         visited = set()
         queue = deque()
-        tolerance = 60
+        tolerance = 80
 
         def matches_bg(x, y):
             r, g, b = int(pixels[x, y, 0]), int(pixels[x, y, 1]), int(pixels[x, y, 2])

@@ -446,5 +446,20 @@
     "name_cn": "",
     "tags": "",
     "description": ""
+  },
+  "screenshot_1781227119384": {
+    "name_en": "screenshot_1781227119384",
+    "_type_detected": true,
+    "name_cn": "",
+    "file_type": "furniture",
+    "tags": "",
+    "description": "",
+    "category": "ground",
+    "scale": 0.1,
+    "extra_scale": 1.0,
+    "height": 0,
+    "is_wall": false,
+    "no_collision": false,
+    "is_light": false
   }
 }

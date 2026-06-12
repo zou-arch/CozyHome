@@ -129,9 +129,7 @@ def _process_single_image(args):
 
 
 def batch_process_images():
-    """批量处理 scot 文件夹中的图片，去除背景和水印，保存到 A 文件夹（多线程并行）"""
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-
+    """批量处理 scot 文件夹中的图片，去除背景和水印，保存到 A 文件夹"""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     if not os.path.exists(SCOT_DIR):
@@ -157,20 +155,11 @@ def batch_process_images():
         print("所有图片已处理完成！")
         return
 
-    print(f"并行处理 {len(files)} 张图片...")
+    print(f"处理 {len(files)} 张图片...")
 
-    # 准备任务参数
-    tasks = [(fname, SCOT_DIR, OUTPUT_DIR) for fname in files]
-    completed = 0
-    total = len(tasks)
-
-    # 多线程并行处理
-    with ThreadPoolExecutor(max_workers=min(8, os.cpu_count() or 4)) as executor:
-        futures = {executor.submit(_process_single_image, task): task for task in tasks}
-        for future in as_completed(futures):
-            fname, removed = future.result()
-            completed += 1
-            print(f"  [{completed}/{total}] {fname}: 去除 {removed} 像素 + 水印")
+    for i, fname in enumerate(files, 1):
+        fname_result, removed = _process_single_image((fname, SCOT_DIR, OUTPUT_DIR))
+        print(f"  [{i}/{len(files)}] {fname_result}: 去除 {removed} 像素 + 水印")
 
     print("批量处理完成!\n")
 

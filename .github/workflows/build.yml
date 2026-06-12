@@ -19,12 +19,18 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y openjdk-17-jdk wget unzip git libtool libtool-bin automake autoconf m4
+        # 验证 libtool m4 宏已安装
+        grep -r "LT_SYS_SYMBOL_USCORE" /usr/share/aclocal/ || echo "WARNING: LT_SYS_SYMBOL_USCORE not found in /usr/share/aclocal/"
 
     - name: Install Python dependencies
       run: |
         pip install --upgrade pip
         pip install "cython<3.0.0"
         pip install buildozer
+
+    - name: Clean buildozer cache
+      run: |
+        rm -rf ~/.buildozer/android/platform/
 
     - name: Build APK
       run: |
