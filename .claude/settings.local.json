@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import pyautogui; print\\('屏幕大小:', pyautogui.size\\(\\)\\); print\\('当前鼠标:', pyautogui.position\\(\\)\\)\")",
+      "Bash(cd E:/CozyHome && mkdir -p scenes/main scenes/room scenes/garden scenes/ui scenes/objects scripts/autoload scripts/player scripts/objects scripts/ui shaders data assets/audio/bgm assets/audio/sfx assets/fonts)",
+      "Bash(\"E:/Godot/Godot_v4.6.3-stable_win64.exe\" --path E:/CozyHome)",
+      "WebFetch(domain:www.taptap.cn)",
+      "WebFetch(domain:baike.baidu.com)",
+      "WebFetch(domain:www.xiaohongshu.com)",
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:wojuwuyu.skydreams.cn)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" \"https://wojuwuyu.skydreams.cn\")",
+      "Bash(curl -sL \"https://wojuwuyu.skydreams.cn\")",
+      "Bash(curl -sL \"https://www.bilibili.com/video/BV1w8Q7B7EvP/\")",
+      "Bash(curl -sL --compressed \"https://www.bilibili.com/video/BV1w8Q7B7EvP/\")",
+      "Bash(python -c ' *)",
+      "Bash(python tools/remove_bg.py)"
+    ],
+    "additionalDirectories": [
+      "E:\\CozyHome\\scenes"
+    ]
+  }
+}

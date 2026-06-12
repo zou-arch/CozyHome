@@ -1,0 +1,49 @@
+{
+  "coins": 100,
+  "unlocked_seeds": [
+    "tomato",
+    "carrot",
+    "pumpkin",
+    "sunflower",
+    "rose",
+    "strawberry",
+    "lotus",
+    "waterlily",
+    "succulent",
+    "cactus",
+    "aloe",
+    "sandthorn"
+  ],
+  "unlocked_furniture": [
+    "waterstorage"
+  ],
+  "inventory": {
+    "seeds": {
+      "tomato": 20
+    },
+    "harvests": {},
+    "pets": []
+  },
+  "selected_seeds": {},
+  "water": 1200,
+  "ui_settings": {
+    "fp_category": "all"
+  },
+  "unlocked_tiles": [],
+  "tutorial_completed": true,
+  "floor_styles": {},
+  "farm_styles": {},
+  "crops": [],
+  "furniture": [],
+  "weather": {
+    "weather": "雨天",
+    "last_change_time": 1781223507.6583884,
+    "rain_duration": 171.97913427291638,
+    "rain_water_added": true
+  },
+  "pets": {
+    "active_pets": [],
+    "pet_data": {}
+  },
+  "save_time": 1781223507.746167
+}

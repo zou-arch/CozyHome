@@ -1,0 +1,44 @@
+{
+    "tomato": {
+        "name": "番茄",
+        "growth_time": 300.0,
+        "sell_price": 10,
+        "seed_price": 5,
+        "level_required": 1
+    },
+    "carrot": {
+        "name": "胡萝卜",
+        "growth_time": 240.0,
+        "sell_price": 8,
+        "seed_price": 3,
+        "level_required": 2
+    },
+    "pumpkin": {
+        "name": "南瓜",
+        "growth_time": 360.0,
+        "sell_price": 15,
+        "seed_price": 8,
+        "level_required": 3
+    },
+    "sunflower": {
+        "name": "向日葵",
+        "growth_time": 300.0,
+        "sell_price": 12,
+        "seed_price": 6,
+        "level_required": 4
+    },
+    "rose": {
+        "name": "玫瑰",
+        "growth_time": 420.0,
+        "sell_price": 20,
+        "seed_price": 10,
+        "level_required": 5
+    },
+    "strawberry": {
+        "name": "草莓",
+        "growth_time": 240.0,
+        "sell_price": 12,
+        "seed_price": 6,
+        "level_required": 6
+    }
+}

@@ -1,0 +1,349 @@
+{
+  "golden_retriever": {
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep",
+      "roll",
+      "special",
+      "puddle_play"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "run",
+        "hungry",
+        "sleep"
+      ],
+      "2": [
+        "tongueidle"
+      ],
+      "3": [
+        "roll"
+      ],
+      "5": [
+        "special",
+        "puddle_play"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 18,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 8,
+        "loop": false,
+        "offset_x": -15,
+        "offset_y": 3
+      },
+      "hungry": {
+        "fps": 8,
+        "loop": true,
+        "offset_x": -14,
+        "offset_y": 20,
+        "scale": 0.85
+      },
+      "sleep": {
+        "fps": 16,
+        "loop": true,
+        "loop_start": 45,
+        "offset_x": -10,
+        "offset_y": 28,
+        "scale": 0.9
+      },
+      "roll": {
+        "fps": 12,
+        "loop": true,
+        "offset_x": -12,
+        "offset_y": 12,
+        "scale": 1.0
+      },
+      "special": {
+        "fps": 10,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "run": {
+        "fps": 12,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0,
+        "scale": 1.0
+      },
+      "tongueidle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": -10,
+        "offset_y": 13,
+        "scale": 0.6
+      },
+      "puddle_play": {
+        "scale": 0.8,
+        "offset_x": 4,
+        "offset_y": 12,
+        "fps": 14
+      }
+    }
+  },
+  "blue_cat": {
+    "name": "蓝猫",
+    "shop_price": 450,
+    "intro": "安静优雅的蓝猫，喜欢晒太阳",
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep",
+      "happy"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "hungry"
+      ],
+      "1": [
+        "sleep"
+      ],
+      "3": [
+        "happy"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 8,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "hungry": {
+        "fps": 6,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "sleep": {
+        "fps": 4,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "happy": {
+        "fps": 10,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      }
+    }
+  },
+  "rabbit": {
+    "name": "兔子",
+    "shop_price": 400,
+    "intro": "活泼可爱的小兔子，最爱吃胡萝卜",
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "hungry"
+      ],
+      "1": [
+        "sleep"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 10,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "hungry": {
+        "fps": 6,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "sleep": {
+        "fps": 4,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      }
+    }
+  },
+  "hamster": {
+    "name": "仓鼠",
+    "shop_price": 300,
+    "intro": "圆滚滚的小仓鼠，喜欢藏食物",
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "hungry"
+      ],
+      "1": [
+        "sleep"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 10,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "hungry": {
+        "fps": 6,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "sleep": {
+        "fps": 4,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      }
+    }
+  },
+  "chick": {
+    "name": "小鸡",
+    "shop_price": 200,
+    "intro": "毛茸茸的小鸡雏，每天早起叽叽叫",
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "hungry"
+      ],
+      "1": [
+        "sleep"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 10,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "hungry": {
+        "fps": 6,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "sleep": {
+        "fps": 4,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      }
+    }
+  },
+  "penguin": {
+    "name": "小企鹅",
+    "shop_price": 500,
+    "intro": "摇摇晃晃的小企鹅，喜欢滚雪球",
+    "states": [
+      "idle",
+      "walk",
+      "hungry",
+      "sleep",
+      "roll"
+    ],
+    "level_unlocks": {
+      "0": [
+        "idle",
+        "walk",
+        "hungry"
+      ],
+      "1": [
+        "sleep"
+      ],
+      "3": [
+        "roll"
+      ]
+    },
+    "state_config": {
+      "idle": {
+        "fps": 6,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "walk": {
+        "fps": 8,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "hungry": {
+        "fps": 6,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "sleep": {
+        "fps": 4,
+        "loop": true,
+        "offset_x": 0,
+        "offset_y": 0
+      },
+      "roll": {
+        "fps": 12,
+        "loop": false,
+        "offset_x": 0,
+        "offset_y": 0
+      }
+    }
+  }
+}
