@@ -19,8 +19,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y openjdk-17-jdk wget unzip git libtool libtool-bin automake autoconf m4
-        # 验证 libtool m4 宏已安装
-        grep -r "LT_SYS_SYMBOL_USCORE" /usr/share/aclocal/ || echo "WARNING: LT_SYS_SYMBOL_USCORE not found in /usr/share/aclocal/"
+        # 修复 LT_SYS_SYMBOL_USCORE 宏缺失（Ubuntu 24.04 的 libtool 不包含此宏）
+        if ! grep -q "LT_SYS_SYMBOL_USCORE" /usr/share/aclocal/libtool.m4 2>/dev/null; then
+          echo "下载完整的 libtool.m4..."
+          sudo wget -q -O /usr/share/aclocal/libtool.m4 https://raw.githubusercontent.com/autotools-mirror/libtool/master/m4/libtool.m4
+          echo "libtool.m4 已更新"
+        fi
 
     - name: Install Python dependencies
       run: |

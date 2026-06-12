@@ -245,7 +245,7 @@ def batch_flood_remove():
         outside = set()
         visited = set()
         queue = deque()
-        tolerance = 80
+        tolerance = 60
 
         def matches_bg(x, y):
             r, g, b = int(pixels[x, y, 0]), int(pixels[x, y, 1]), int(pixels[x, y, 2])
@@ -853,7 +853,7 @@ class FurnitureEditor:
             return 0
         q = deque([(sx, sy)])
         filled = {(sx, sy)}
-        tolerance = 80
+        tolerance = 60
         while q:
             cx, cy = q.popleft()
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
@@ -973,7 +973,7 @@ class FurnitureEditor:
         outside = set()
         visited = set()
         queue = deque()
-        tolerance = 80
+        tolerance = 60
 
         def matches_bg(x, y):
             r, g, b = int(pixels[x, y, 0]), int(pixels[x, y, 1]), int(pixels[x, y, 2])
