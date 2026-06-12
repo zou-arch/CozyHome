@@ -70,24 +70,8 @@ class UI:
 
     def load_chinese_font(self, size: int):
         """加载中文字体"""
-        # Windows 系统中文字体路径
-        font_paths = [
-            "C:/Windows/Fonts/msyh.ttc",  # 微软雅黑
-            "C:/Windows/Fonts/simhei.ttf",  # 黑体
-            "C:/Windows/Fonts/simsun.ttc",  # 宋体
-            "C:/Windows/Fonts/msyhbd.ttc",  # 微软雅黑粗体
-        ]
-
-        for font_path in font_paths:
-            if os.path.exists(font_path):
-                try:
-                    return pygame.font.Font(font_path, size)
-                except:
-                    continue
-
-        # 如果找不到中文字体，使用默认字体
-        print("警告：未找到中文字体，使用默认字体")
-        return pygame.font.Font(None, size)
+        from ..utils.font import load_chinese_font
+        return load_chinese_font(size)
 
     def init_buttons(self):
         """初始化底部按钮（自适应屏幕宽度）"""

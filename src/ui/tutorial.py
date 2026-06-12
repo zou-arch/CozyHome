@@ -140,12 +140,8 @@ class Tutorial:
         self.rect_skip = None
 
     def _font(self, size):
-        for p in ["C:/Windows/Fonts/msyh.ttc", "C:/Windows/Fonts/simhei.ttf"]:
-            try:
-                return pygame.font.Font(p, size)
-            except:
-                pass
-        return pygame.font.Font(None, size)
+        from ..utils.font import load_chinese_font
+        return load_chinese_font(size)
 
     def show(self):
         self.active = True

@@ -41,18 +41,8 @@ class LoadingScreen:
 
     def _load_font(self, size: int):
         """加载字体"""
-        font_paths = [
-            "C:/Windows/Fonts/msyh.ttc",
-            "C:/Windows/Fonts/simhei.ttf",
-            "C:/Windows/Fonts/simsun.ttc",
-        ]
-        for font_path in font_paths:
-            if os.path.exists(font_path):
-                try:
-                    return pygame.font.Font(font_path, size)
-                except:
-                    continue
-        return pygame.font.Font(None, size)
+        from ..utils.font import load_chinese_font
+        return load_chinese_font(size)
 
     def update_progress(self, progress: float, status: str = None):
         """更新进度"""
