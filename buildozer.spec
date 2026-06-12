@@ -15,8 +15,8 @@ source.include_patterns = assets/*,data/*,fonts/*
 # 版本
 version = 0.1.0
 
-# 依赖（pygame-ce 是 pygame 的社区维护版，兼容 buildozer）
-requirements = python3,pygame-ce
+# 依赖
+requirements = python3,pygame
 
 # Android配置
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE
